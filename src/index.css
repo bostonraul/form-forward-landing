@@ -1,6 +1,9 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap');
 
 @layer base {
   :root {
@@ -13,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 214 84% 51%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -33,22 +36,6 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
@@ -79,23 +66,119 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
+body {
+  font-family: 'Baloo 2', cursive;
+  background: #F5F9FF;
+}
 
-  body {
-    @apply bg-background text-foreground;
+.baby-font {
+  font-family: 'Baloo 2', cursive;
+  letter-spacing: -0.5px;
+}
+
+.headline {
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.sub-headline {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.baby-button {
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 8px 0 rgba(16, 69, 155, 0.5);
+}
+
+.baby-button:hover {
+  transform: translateY(2px);
+  box-shadow: 0 6px 0 rgba(16, 69, 155, 0.5);
+}
+
+.baby-button:active {
+  transform: translateY(8px);
+  box-shadow: 0 0 0 rgba(16, 69, 155, 0.5);
+}
+
+.baby-stroller {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 5%;
+  top: 15%;
+  opacity: 0.15;
+  transform: rotate(-5deg);
+}
+
+.baby-crib {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: 5%;
+  bottom: 15%;
+  opacity: 0.15;
+  transform: rotate(5deg);
+}
+
+.baby-tricycle {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: 5%;
+  bottom: 15%;
+  opacity: 0.15;
+  transform: rotate(-10deg);
+}
+
+.baby-rocker {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: 5%;
+  top: 15%;
+  opacity: 0.15;
+  transform: rotate(10deg);
+}
+
+.baby-heart {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 48%;
+  top: 30%;
+  opacity: 0.3;
+  transform: rotate(15deg);
+}
+
+.baby-carriage-wheel-1 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 42%;
+  bottom: 40%;
+  opacity: 0.3;
+}
+
+.baby-carriage-wheel-2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 42%;
+  bottom: 40%;
+  opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+  .baby-stroller, .baby-crib, .baby-tricycle, .baby-rocker {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .baby-heart, .baby-carriage-wheel-1, .baby-carriage-wheel-2 {
+    width: 40px;
+    height: 40px;
   }
 }

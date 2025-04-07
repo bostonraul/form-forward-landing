@@ -1,11 +1,81 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import BabyGearIcon from "@/components/BabyGearIcon";
+
+const GOOGLE_FORM_URL = "https://forms.google.com";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-10">
+      {/* Background baby gear illustrations */}
+      <BabyGearIcon 
+        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
+        className="baby-stroller" 
+      />
+      <BabyGearIcon 
+        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
+        className="baby-crib" 
+      />
+      <BabyGearIcon 
+        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
+        className="baby-tricycle" 
+      />
+      <BabyGearIcon 
+        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
+        className="baby-rocker" 
+      />
+      
+      {/* Baby carriage elements */}
+      <BabyGearIcon 
+        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
+        className="baby-heart" 
+      />
+      <BabyGearIcon 
+        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
+        className="baby-carriage-wheel-1" 
+      />
+      <BabyGearIcon 
+        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
+        className="baby-carriage-wheel-2" 
+      />
+      
+      <div className="z-10 max-w-4xl w-full text-center">
+        {/* Main headline */}
+        <h1 className="baby-font headline text-primary text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+          ARE YOU LOOKING FOR A WAY TO GIVE YOUR <br />
+          UNUSED BABY GEAR A NEW LIFE?
+        </h1>
+        
+        {/* Call-to-action button */}
+        <div className="flex justify-center mb-16 mt-12">
+          <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
+            <Button className="baby-button baby-font bg-primary hover:bg-primary/90 text-white text-xl md:text-2xl px-8 py-6 rounded-xl flex items-center gap-2">
+              JOIN NOW
+              <ArrowRight className="ml-2" />
+            </Button>
+          </a>
+        </div>
+        
+        {/* Sub headline */}
+        <h2 className="baby-font sub-headline text-primary text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          Join our parent community
+        </h2>
+        
+        {/* Options */}
+        <div className="flex justify-center items-center gap-4 md:gap-8 baby-font text-primary text-2xl md:text-3xl font-bold mb-10">
+          <span>DONATE</span>
+          <span className="text-gray-400">|</span>
+          <span>RENT</span>
+          <span className="text-gray-400">|</span>
+          <span>DISPOSE</span>
+        </div>
+        
+        {/* Contact info */}
+        <div className="text-primary/80 text-lg md:text-xl mt-16">
+          <p className="mb-2">www.toybuddy.shop</p>
+        </div>
       </div>
     </div>
   );
