@@ -4,12 +4,13 @@ import React from "react";
 type BabyGearIconProps = {
   svgPath: string;
   className?: string;
+  alt?: string;
 };
 
-const BabyGearIcon = ({ svgPath, className = "" }: BabyGearIconProps) => {
+const BabyGearIcon = ({ svgPath, className = "", alt = "Baby gear illustration" }: BabyGearIconProps) => {
   return (
-    <div className={className}>
-      <img src={svgPath} alt="Baby gear illustration" className="w-full h-full" />
+    <div className={`opacity-15 transition-transform duration-500 ${className}`}>
+      <img src={svgPath} alt={alt} className="w-full h-full" />
     </div>
   );
 };

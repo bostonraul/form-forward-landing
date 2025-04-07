@@ -12,33 +12,33 @@ const Index = () => {
       {/* Background baby gear illustrations */}
       <BabyGearIcon 
         svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="baby-stroller" 
+        className="absolute w-36 h-36 md:w-48 md:h-48 left-5 top-20 animate-float" 
+        alt="Baby stroller"
       />
       <BabyGearIcon 
         svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="baby-crib" 
+        className="absolute w-36 h-36 md:w-48 md:h-48 right-5 bottom-24 animate-float animation-delay-2000" 
+        alt="Baby crib"
       />
       <BabyGearIcon 
         svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="baby-tricycle" 
+        className="absolute w-36 h-36 md:w-48 md:h-48 left-5 bottom-24 animate-float animation-delay-1000" 
+        alt="Baby tricycle"
       />
       <BabyGearIcon 
         svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="baby-rocker" 
-      />
-      
-      {/* Baby carriage elements */}
-      <BabyGearIcon 
-        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="baby-heart" 
+        className="absolute w-28 h-28 md:w-40 md:h-40 right-5 top-20 animate-float animation-delay-3000" 
+        alt="Baby high chair"
       />
       <BabyGearIcon 
         svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="baby-carriage-wheel-1" 
+        className="absolute w-28 h-28 md:w-36 md:h-36 left-1/4 top-1/3 animate-float animation-delay-2500" 
+        alt="Baby rocker"
       />
       <BabyGearIcon 
         svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="baby-carriage-wheel-2" 
+        className="absolute w-24 h-24 md:w-32 md:h-32 right-1/4 top-1/3 animate-float animation-delay-1500" 
+        alt="Baby toy"
       />
       
       <div className="z-10 max-w-4xl w-full text-center">
