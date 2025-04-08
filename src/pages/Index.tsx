@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -8,22 +7,26 @@ const GOOGLE_FORM_URL = "https://forms.google.com";
 const Index = () => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-10">
-      {/* Background image with increased opacity */}
-      <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
-        style={{
-          backgroundImage: "url('/lovable-uploads/7e797961-221d-470c-bc72-4efd7dc4e8a1.png')",
-          opacity: 0.45, // Increased from 0.15 to 0.25 for better visibility
-        }}
-      ></div>
-      
+      {/* Background image with overlay for subtle watermark effect */}
+      <div className="absolute inset-0 z-0">
+        <div
+          className="w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('/lovable-uploads/7e797961-221d-470c-bc72-4efd7dc4e8a1.png')",
+          }}
+        />
+        {/* White overlay to give a watermark effect */}
+        <div className="absolute inset-0 bg-white opacity-60" />
+      </div>
+
       <div className="z-10 max-w-4xl w-full text-center">
         {/* Main headline */}
         <h1 className="baby-font headline text-primary text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
           ARE YOU LOOKING FOR A WAY TO GIVE YOUR <br />
           UNUSED BABY GEAR A NEW LIFE?
         </h1>
-        
+
         {/* Call-to-action button */}
         <div className="flex justify-center mb-16 mt-12">
           <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
@@ -33,12 +36,12 @@ const Index = () => {
             </Button>
           </a>
         </div>
-        
+
         {/* Sub headline */}
         <h2 className="baby-font sub-headline text-primary text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
           Join our parent community
         </h2>
-        
+
         {/* Options */}
         <div className="flex justify-center items-center gap-4 md:gap-8 baby-font text-primary text-2xl md:text-3xl font-bold mb-10">
           <span>DONATE</span>
@@ -47,7 +50,7 @@ const Index = () => {
           <span className="text-gray-400">|</span>
           <span>DISPOSE</span>
         </div>
-        
+
         {/* Contact info */}
         <div className="text-primary/80 text-lg md:text-xl mt-16">
           <p className="mb-2">www.toybuddy.shop</p>
