@@ -8,11 +8,12 @@ const GOOGLE_FORM_URL = "https://forms.google.com";
 const Index = () => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-10">
-      {/* Background image */}
+      {/* Background image with increased opacity */}
       <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center opacity-15 z-0"
+        className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
         style={{
           backgroundImage: "url('/lovable-uploads/7e797961-221d-470c-bc72-4efd7dc4e8a1.png')",
+          opacity: 0.25, // Increased from 0.15 to 0.25 for better visibility
         }}
       ></div>
       

@@ -102,10 +102,7 @@ body {
   box-shadow: 0 0 0 rgba(16, 69, 155, 0.5);
 }
 
-/* Opacity for background image */
-.opacity-15 {
-  opacity: 0.15;
-}
+/* Opacity class removed as we're using inline opacity */
 
 @media (max-width: 768px) {
   .baby-stroller, .baby-crib, .baby-tricycle, .baby-rocker {
