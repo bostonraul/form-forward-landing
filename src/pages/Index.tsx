@@ -13,7 +13,7 @@ const Index = () => {
         className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
         style={{
           backgroundImage: "url('/lovable-uploads/7e797961-221d-470c-bc72-4efd7dc4e8a1.png')",
-          opacity: 0.25, // Increased from 0.15 to 0.25 for better visibility
+          opacity: 0.45, // Increased from 0.15 to 0.25 for better visibility
         }}
       ></div>
       
