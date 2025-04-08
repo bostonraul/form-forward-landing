@@ -9,7 +9,7 @@ type BabyGearIconProps = {
 
 const BabyGearIcon = ({ svgPath, className = "", alt = "Baby gear illustration" }: BabyGearIconProps) => {
   return (
-    <div className={`opacity-15 transition-transform duration-500 ${className}`}>
+    <div className={`transition-transform duration-500 ${className}`}>
       <img src={svgPath} alt={alt} className="w-full h-full" />
     </div>
   );

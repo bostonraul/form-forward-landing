@@ -2,44 +2,19 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import BabyGearIcon from "@/components/BabyGearIcon";
 
 const GOOGLE_FORM_URL = "https://forms.google.com";
 
 const Index = () => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-10">
-      {/* Background baby gear illustrations */}
-      <BabyGearIcon 
-        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="absolute w-36 h-36 md:w-48 md:h-48 left-5 top-20 animate-float" 
-        alt="Baby stroller"
-      />
-      <BabyGearIcon 
-        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="absolute w-36 h-36 md:w-48 md:h-48 right-5 bottom-24 animate-float animation-delay-2000" 
-        alt="Baby crib"
-      />
-      <BabyGearIcon 
-        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="absolute w-36 h-36 md:w-48 md:h-48 left-5 bottom-24 animate-float animation-delay-1000" 
-        alt="Baby tricycle"
-      />
-      <BabyGearIcon 
-        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="absolute w-28 h-28 md:w-40 md:h-40 right-5 top-20 animate-float animation-delay-3000" 
-        alt="Baby high chair"
-      />
-      <BabyGearIcon 
-        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="absolute w-28 h-28 md:w-36 md:h-36 left-1/4 top-1/3 animate-float animation-delay-2500" 
-        alt="Baby rocker"
-      />
-      <BabyGearIcon 
-        svgPath="/lovable-uploads/a4229c87-0e94-40a8-93b8-606114b99f60.png" 
-        className="absolute w-24 h-24 md:w-32 md:h-32 right-1/4 top-1/3 animate-float animation-delay-1500" 
-        alt="Baby toy"
-      />
+      {/* Background image */}
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center opacity-15 z-0"
+        style={{
+          backgroundImage: "url('/lovable-uploads/ac2f76b0-581a-4429-a876-69d2b8105cd2.png')",
+        }}
+      ></div>
       
       <div className="z-10 max-w-4xl w-full text-center">
         {/* Main headline */}
