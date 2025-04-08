@@ -19,7 +19,7 @@ const Index = () => {
           }}
         ></div>
         {/* White overlay for watermark effect */}
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-white/75 backdrop-blur-sm"></div>
       </div>
 
       {/* Foreground content */}
