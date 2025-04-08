@@ -15,7 +15,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/lovable-uploads/AdobeStock_783136158_Preview.jpeg')",
+              "url('/lovable-uploads/AdobeStock_783136158_Preview.jpeg')"  ,
           }}
         ></div>
         {/* White overlay for watermark effect */}
