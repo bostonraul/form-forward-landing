@@ -25,7 +25,7 @@ const Index = () => {
       <div className="z-10 max-w-4xl w-full text-center">
         {/* Hero Section */}
         <h1 className="baby-font headline text-primary text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-          Give your baby gear a second home—make space, make an impact
+           Give your baby gear a second home<br />—make space, make an impact
         </h1>
 
         {/* How It Works Section */}
@@ -41,7 +41,7 @@ const Index = () => {
                 Pick the Gear to Share
               </h3>
               <p className="text-primary/80 text-lg">
-                Select the baby items you'd like to share with other families
+                Decide the baby items you'd like to share with other families
               </p>
             </div>
 
