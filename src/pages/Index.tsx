@@ -25,8 +25,7 @@ const Index = () => {
       {/* Foreground content */}
       <div className="z-10 max-w-4xl w-full text-center">
         <h1 className="baby-font headline text-primary text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-          ARE YOU LOOKING FOR A WAY TO GIVE YOUR <br />
-          UNUSED BABY GEAR A NEW LIFE?
+          Give your baby gear a second home—make space, make an impact
         </h1>
 
         <div className="flex justify-center mb-16 mt-12">
@@ -47,7 +46,7 @@ const Index = () => {
           <span className="text-gray-400">|</span>
           <span>RENT</span>
           <span className="text-gray-400">|</span>
-          <span>DISPOSE</span>
+          <span>REPURPOSE</span>
         </div>
 
         <div className="text-primary/80 text-lg md:text-xl mt-16">
