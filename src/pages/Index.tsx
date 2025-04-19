@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -28,15 +27,6 @@ const Index = () => {
         <h1 className="baby-font headline text-primary text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
           Give your baby gear a second home—make space, make an impact
         </h1>
-
-        <div className="flex justify-center mb-16 mt-12">
-          <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
-            <Button className="baby-button baby-font bg-primary hover:bg-primary/90 text-white text-xl md:text-2xl px-8 py-6 rounded-xl flex items-center gap-2">
-              JOIN NOW
-              <ArrowRight className="ml-2" />
-            </Button>
-          </a>
-        </div>
 
         {/* How It Works Section */}
         <div className="mt-24 mb-16">
@@ -77,17 +67,21 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Join Community Section */}
-        <h2 className="baby-font sub-headline text-primary text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-          Join our parent community
-        </h2>
-
         <div className="flex justify-center items-center gap-4 md:gap-8 baby-font text-primary text-2xl md:text-3xl font-bold mb-10">
           <span>DONATE</span>
           <span className="text-gray-400">|</span>
           <span>RENT</span>
           <span className="text-gray-400">|</span>
           <span>REPURPOSE</span>
+        </div>
+
+        <div className="flex justify-center mb-16 mt-12">
+          <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
+            <Button className="baby-button baby-font bg-primary hover:bg-primary/90 text-white text-xl md:text-2xl px-8 py-6 rounded-xl flex items-center gap-2">
+              JOIN NOW
+              <ArrowRight className="ml-2" />
+            </Button>
+          </a>
         </div>
 
         <div className="text-primary/80 text-lg md:text-xl mt-16">
