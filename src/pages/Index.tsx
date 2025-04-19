@@ -1,6 +1,8 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import CurlyArrow from "@/components/CurlyArrow";
 
 const GOOGLE_FORM_URL = "https://forms.google.com";
 
@@ -45,7 +47,8 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="flex flex-col items-center">
+            <div className="relative flex flex-col items-center">
+              <CurlyArrow />
               <div className="text-primary text-2xl font-bold mb-3">2</div>
               <h3 className="baby-font text-primary text-xl md:text-2xl font-bold mb-4">
                 Give Us a Ring (or Ping!)
@@ -55,7 +58,8 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="flex flex-col items-center">
+            <div className="relative flex flex-col items-center">
+              <CurlyArrow />
               <div className="text-primary text-2xl font-bold mb-3">3</div>
               <h3 className="baby-font text-primary text-xl md:text-2xl font-bold mb-4">
                 Sit Back—We've Got It Covered
