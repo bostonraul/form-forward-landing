@@ -1,35 +1,7 @@
-
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import { GearSubmissionForm } from "@/components/GearSubmissionForm";
 
 const Index = () => {
-  const [formData, setFormData] = useState({
-    babygear: "",
-    location: "",
-    phone: ""
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const { data, error } = await supabase.from("submissions").insert([formData]);
-
-    if (error) {
-      console.error("Submission Error:", error);
-    } else {
-      console.log("Submitted:", data);
-      setIsSubmitted(true);
-    }
-  };
-
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-10">
       <div className="absolute inset-0 z-0">
@@ -54,6 +26,8 @@ const Index = () => {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* How it works steps */}
+            {/* Step 1 */}
             <div className="flex flex-col items-center">
               <div className="text-primary text-2xl font-bold mb-3">1</div>
               <h3 className="baby-font text-primary text-xl md:text-2xl font-bold mb-4">
@@ -64,6 +38,7 @@ const Index = () => {
               </p>
             </div>
 
+            {/* Step 2 */}
             <div className="flex flex-col items-center">
               <div className="text-primary text-2xl font-bold mb-3">2</div>
               <h3 className="baby-font text-primary text-xl md:text-2xl font-bold mb-4">
@@ -74,6 +49,7 @@ const Index = () => {
               </p>
             </div>
 
+            {/* Step 3 */}
             <div className="flex flex-col items-center">
               <div className="text-primary text-2xl font-bold mb-3">3</div>
               <h3 className="baby-font text-primary text-xl md:text-2xl font-bold mb-4">
@@ -94,7 +70,7 @@ const Index = () => {
           <span>REPURPOSE</span>
         </div>
 
-        {/* Form Section - replacing Google Form button */}
+        {/* Form Section */}
         <div className="flex justify-center mb-16 mt-12">
           <GearSubmissionForm />
         </div>
