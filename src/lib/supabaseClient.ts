@@ -5,14 +5,27 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn('Supabase credentials not found. Please set environment variables.');
-}
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
+// Export the type for the form submission
 export type GearSubmission = {
   gear_type: string;
   society: string;
   phone: string;
 };
+
+// Check if credentials are available
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.warn('Supabase credentials not found. Please set environment variables.');
+}
+
+// Create a mock client for development when credentials are missing
+// This prevents the app from crashing but won't actually connect to Supabase
+export const supabase = supabaseUrl && supabaseAnonKey 
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : {
+      from: () => ({
+        insert: async () => ({ 
+          error: new Error('Supabase not configured. Set environment variables.'),
+          data: null
+        })
+      })
+    } as unknown as ReturnType<typeof createClient>;
