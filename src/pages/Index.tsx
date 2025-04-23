@@ -1,8 +1,7 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
-const GOOGLE_FORM_URL = "https://forms.google.com";
+import React from "react";
+import { ArrowRight } from "lucide-react";
+import { GearSubmissionForm } from "@/components/GearSubmissionForm";
 
 const Index = () => {
   return (
@@ -14,7 +13,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/lovable-uploads/AdobeStock_783136158_Preview.jpeg')"  ,
+              "url('/lovable-uploads/AdobeStock_783136158_Preview.jpeg')",
           }}
         ></div>
         {/* White overlay for watermark effect */}
@@ -25,7 +24,7 @@ const Index = () => {
       <div className="z-10 max-w-4xl w-full text-center">
         {/* Hero Section */}
         <h1 className="baby-font headline text-primary text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-           Give your baby gear a second home<br />—make space, make an impact
+          Give your baby gear a second home<br />—make space, make an impact
         </h1>
 
         {/* How It Works Section */}
@@ -75,13 +74,9 @@ const Index = () => {
           <span>REPURPOSE</span>
         </div>
 
+        {/* Form Section - replacing Google Form button */}
         <div className="flex justify-center mb-16 mt-12">
-          <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
-            <Button className="baby-button baby-font bg-primary hover:bg-primary/90 text-white text-xl md:text-2xl px-8 py-6 rounded-xl flex items-center gap-2">
-              JOIN NOW
-              <ArrowRight className="ml-2" />
-            </Button>
-          </a>
+          <GearSubmissionForm />
         </div>
 
         <div className="text-primary/80 text-lg md:text-xl mt-16">
