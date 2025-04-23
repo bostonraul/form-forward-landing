@@ -1,5 +1,6 @@
 import React from "react";
 import { GearSubmissionForm } from "@/components/GearSubmissionForm";
+import FormLightbox from "@/components/FormLightbox";
 
 const Index = () => {
   return (
@@ -72,7 +73,7 @@ const Index = () => {
 
         {/* Form Section */}
         <div className="flex justify-center mb-16 mt-12">
-          <GearSubmissionForm />
+          <FormLightbox />
         </div>
 
         <div className="text-primary/80 text-lg md:text-xl mt-16">
