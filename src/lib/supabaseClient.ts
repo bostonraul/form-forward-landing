@@ -1,4 +1,3 @@
-
 import { createClient } from '@supabase/supabase-js';
 
 // Environment variables should be set after connecting to Supabase in Lovable

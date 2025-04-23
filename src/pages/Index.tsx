@@ -4,11 +4,35 @@ import { ArrowRight } from "lucide-react";
 import { GearSubmissionForm } from "@/components/GearSubmissionForm";
 
 const Index = () => {
+  const [formData, setFormData] = useState({
+    babygear: "",
+    location: "",
+    phone: ""
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const { data, error } = await supabase.from("submissions").insert([formData]);
+
+    if (error) {
+      console.error("Submission Error:", error);
+    } else {
+      console.log("Submitted:", data);
+      setIsSubmitted(true);
+    }
+  };
+
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-10">
-      {/* Background image with white overlay */}
       <div className="absolute inset-0 z-0">
-        {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -16,23 +40,19 @@ const Index = () => {
               "url('/lovable-uploads/AdobeStock_783136158_Preview.jpeg')",
           }}
         ></div>
-        {/* White overlay for watermark effect */}
         <div className="absolute inset-0 bg-white/75 backdrop-blur-sm"></div>
       </div>
 
-      {/* Foreground content */}
       <div className="z-10 max-w-4xl w-full text-center">
-        {/* Hero Section */}
         <h1 className="baby-font headline text-primary text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
           Give your baby gear a second home<br />—make space, make an impact
         </h1>
 
-        {/* How It Works Section */}
         <div className="mt-24 mb-16">
           <h2 className="baby-font text-primary text-3xl md:text-4xl lg:text-5xl font-bold mb-12">
             How It Works
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="flex flex-col items-center">
               <div className="text-primary text-2xl font-bold mb-3">1</div>
