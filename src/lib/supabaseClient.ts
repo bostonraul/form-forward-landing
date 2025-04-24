@@ -9,6 +9,7 @@ export type GearSubmission = {
   gear_type: string;
   society: string;
   phone: string;
+  goodasnewgear: string;
 };
 
 // Check if credentials are available
@@ -18,6 +19,10 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 // Create a mock client for development when credentials are missing
 // This prevents the app from crashing but won't actually connect to Supabase
+
+console.log("Supabase URL:", supabaseUrl);
+console.log("Supabase Key:", supabaseAnonKey ? '[KEY PRESENT]' : '[KEY MISSING]');
+
 export const supabase = supabaseUrl && supabaseAnonKey 
   ? createClient(supabaseUrl, supabaseAnonKey)
   : {

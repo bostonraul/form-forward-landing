@@ -97,7 +97,8 @@ export default {
 				'float': 'float 6s ease-in-out infinite'
 			},
 			fontFamily: {
-				baloo: ['"Baloo 2"', 'cursive']
+				sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				Inter: ['"Inter"', 'cursive']
 			}
 		}
 	},

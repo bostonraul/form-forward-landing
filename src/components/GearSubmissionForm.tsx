@@ -15,6 +15,7 @@ export const GearSubmissionForm = () => {
     gear_type: '',
     society: '',
     phone: '',
+    goodasnewgear:'',
   });
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -25,32 +26,37 @@ export const GearSubmissionForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
+    setIsSubmitting(true);  // Set submitting state to true during submission
+  
     try {
+      // Make sure formData is correctly structured, and insert it into the 'gear_submissions' table
       const { error } = await supabase
-        .from('gear_submissions')
+        .from('gear_submissions')  // Replace 'gear_submissions' with your actual table name
         .insert([formData]);
-
+  
+      // If there's an error, throw it to be caught in the catch block
       if (error) {
         throw error;
       }
-
+  
+      // Success handling: set success state, clear the form, and show success toast
       setIsSuccess(true);
-      setFormData({ gear_type: '', society: '', phone: '' });
-      toast({
+      setFormData({ gear_type: '', society: '', phone: '', goodasnewgear: '', });  // Clear form data
+  
+      toast({                 
         title: "Success!",
         description: "We've received your information and will be in touch soon.",
       });
     } catch (error) {
+      // Log the error and show an error toast
       console.error('Error submitting form:', error);
       toast({
         title: "Something went wrong",
         description: "Please try again later.",
-        variant: "destructive",
+        variant: "destructive",  // Use variant for a more prominent error message
       });
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false);  // Reset submitting state after the process completes
     }
   };
 
@@ -120,13 +126,25 @@ export const GearSubmissionForm = () => {
               </div>
             </div>
             
+            <div className="space-y-2">
+              <Label htmlFor="note" className="baby-font text-lg">Is your baby gear  'good as new' & superior condition c- list with us to earn rental income?</Label>
+              <Input
+                id="goodasnewgear"
+                name="goodasnewgear"
+                className="text-lg h-12"
+                placeholder="Optional note (e.g., yes (stroller), no)"
+                value={formData.goodasnewgear}
+                onChange={handleChange}
+                 />
+              </div>
+
             <div className="pt-2">
               <Button 
                 type="submit"
                 disabled={isSubmitting}
                 className="baby-button baby-font w-full bg-primary hover:bg-primary/90 text-white text-xl md:text-2xl px-8 py-6 rounded-xl flex items-center justify-center gap-2"
               >
-                {isSubmitting ? "Submitting..." : "JOIN NOW"}
+                {isSubmitting ? "Submitting..." : "Share Joy"}
                 {!isSubmitting && <ArrowRight className="ml-2" />}
               </Button>
             </div>
