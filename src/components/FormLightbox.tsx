@@ -19,7 +19,7 @@ const FormLightbox = () => {
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
           <div className="bg-white rounded-2xl p-6 w-full max-w-2xl relative shadow-xl">
             <button
-              className="absolute top-3 right-4 text-xl font-bold text-gray-500 hover:text-red-500"
+              className="absolute top-3 right-4 text-3xl text-gray-700 hover:text-red-500 bg-white/80 rounded-full z-50"
               onClick={() => setIsOpen(false)}
             >
               ×
