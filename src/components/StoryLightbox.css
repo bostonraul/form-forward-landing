@@ -1,33 +1,37 @@
 .lightbox-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-  
-  .lightbox-content {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-    font-family: sans-serif;
-  }
-  
-  .lightbox-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 1rem; /* add padding to avoid tight edges on mobile */
+}
+
+.lightbox-content {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;         /* ✅ prevent it from growing too tall */
+  overflow-y: auto;         /* ✅ allow scroll if content overflows */
+  position: relative;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;          /* ✅ slightly larger tap area on mobile */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}

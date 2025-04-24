@@ -53,7 +53,7 @@ const StoryLightbox: React.FC<Props> = ({ onClose }) => {
           As Providers (How You Help)
         </h3>
 
-        <ul style={{ paddingLeft: "1.25rem", listStyleType: "disc", lineHeight: "1.75rem", marginBottom: "2rem" }}>
+        <ul style={{ paddingLeft: "1.25rem", listStyleType: "disc", lineHeight: "1.75rem", marginBottom: "1rem" }}>
           <li>
             There are entrepreneurial opportunities for local families to share their baby gear with parents travelling to their cities.
           </li>
