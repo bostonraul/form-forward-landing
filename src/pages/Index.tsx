@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormLightbox from "@/components/FormLightbox";
 import StoryLightbox from "@/components/StoryLightbox";
+import { trackClick } from "@/lib/trackClick"; // Add this import at top
 
 const Index = () => {
   const [showFormLightbox, setShowFormLightbox] = useState(false);
@@ -64,7 +65,7 @@ const Index = () => {
           {["DONATE", "|", "RENT", "|", "REPURPOSE"].map((label) => (
             <span
               key={label}
-              onClick={() => label !== "|" && (setCtaClicked(label), setShowFormLightbox(true))}
+              onClick={() => label !== "|" && (trackClick(label),setCtaClicked(label), setShowFormLightbox(true))}
               className={`cursor-pointer ${label !== "|" ? "hover:underline hover:text-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-300 transition" : ""}`}
             >
               {label}
@@ -83,7 +84,7 @@ const Index = () => {
 
         <div className="text-primary/80 text-lg md:text-xl mt-16">
           <button
-            onClick={() => setShowStoryLightbox(true)}
+            onClick={() => (trackClick("KNOW_US"), setShowStoryLightbox(true))}
             className="underline text-blue-500 hover:text-blue-700 transition"
           >
             Know Us. Join Us. Make an Impact →
