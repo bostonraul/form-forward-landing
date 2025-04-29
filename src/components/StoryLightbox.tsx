@@ -12,7 +12,7 @@ const StoryLightbox: React.FC<Props> = ({ onClose }) => {
 
         {/* Main Title */}
         <h1 style={{ textAlign: "center", fontSize: "1.75rem", fontWeight: "bold", marginBottom: ".5rem" }}>
-          Baby’s Day Out – A ToyBuddy Initiative
+          TinyTravellers – A ToyBuddy Initiative
         </h1>
 
         {/* Section Title */}
@@ -67,12 +67,12 @@ const StoryLightbox: React.FC<Props> = ({ onClose }) => {
           <p style={{ fontWeight: 500 }}>
             Visit us at:{" "}
             <a
-              href="https://www.toybuddyshop.in"
+              href="https://tinytravellers.toybuddyshop.in"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#3b82f6", textDecoration: "underline" }}
             >
-              www.toybuddyshop.in
+              Tinytravellers
             </a>
           </p>
           <p style={{ fontWeight: 500, marginTop: "0.1rem" }}>
