@@ -61,17 +61,43 @@ const Index = () => {
         </div>
 
         {/* CTA Links */}
-        <div className="flex justify-center items-center gap-4 md:gap-8 baby-font text-primary text-2xl md:text-3xl font-bold mb-10">
-          {["DONATE", "|", "RENT", "|", "REPURPOSE"].map((label) => (
-            <span
-              key={label}
-              onClick={() => label !== "|" && (trackClick(label),setCtaClicked(label), setShowFormLightbox(true))}
-              className={`cursor-pointer ${label !== "|" ? "hover:underline hover:text-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-300 transition" : ""}`}
-            >
-              {label}
-            </span>
-          ))}
+        <div className="flex justify-center items-center gap-4 md:gap-6 flex-wrap baby-font text-primary text-2xl md:text-3xl font-bold mb-10">
+  {[
+    { label: "DONATE", tip: "Give away your baby gear to help a family in need." },
+    { label: "RENT", tip: "List your baby gear and earn rental income from it." },
+    { label: "REPURPOSE", tip: "Let us refurbish and redirect your gear to community impact." },
+  ].map(({ label, tip }, index, arr) => (
+    <React.Fragment key={label}>
+      {/* Label + Tooltip */}
+      <div className="relative group cursor-pointer">
+        <span
+          onClick={() => {
+            trackClick(label);
+            setCtaClicked(label);
+            setShowFormLightbox(true);
+          }}
+          className="hover:underline hover:text-blue-700 hover:scale-105 transition relative inline-block"
+        >
+          {label}
+          <sup className="absolute -top-3 -right-4 text-xs w-4 h-4 flex items-center justify-center rounded-full border border-blue-400 bg-white text-blue-600 font-semibold group-hover:opacity-100 transition-opacity">
+            ?
+          </sup>
+        </span>
+
+        {/* Tooltip */}
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-max max-w-xs bg-gray-900 text-white text-sm px-3 py-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+          {tip}
         </div>
+      </div>
+
+      {/* Separator (add only between items) */}
+      {index < arr.length - 1 && <span className="text-gray-400">|</span>}
+    </React.Fragment>
+  ))}
+</div>
+
+
+
 
         {/* Lightboxes */}
         {showFormLightbox && (
